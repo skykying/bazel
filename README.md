@@ -43,5 +43,5 @@ build --config buildroot-toolchain
 
 ```
 cd example
-bazel run //src:hello
+bazel run //:hello
 ```
