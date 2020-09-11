@@ -18,4 +18,4 @@ rm output/host/usr
 # Archive the SDK (toolchain binaries + sysroot)
 cd output
 mkdir /tmp/artifacts
-tar -I pxz -cf "/tmp/artifacts/bazel-buildroot-toolchain-$(git describe --always --dirty).tar.xz" host
+tar -I pxz -cf "/tmp/artifacts/bazel-br-toolchain-$(git describe --always --dirty).tar.xz" host
