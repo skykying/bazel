@@ -3,4 +3,4 @@
 # All symlinks in this directory point to this script: parse the basename
 # of $0 to figure out which binary to execute.
 
-exec "external/bazel_buildroot_toolchain_files/bin/$(basename "$0")" "$@"
+exec "external/bazel_br_toolchain_files/bin/$(basename "$0")" "$@"
