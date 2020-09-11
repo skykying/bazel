@@ -7,5 +7,5 @@ and defaults to statically linked binaries for easy deployment and use.
 ## Getting started
 
 ```
-bazel run //src:hello
+bazel run //:hello
 ```
