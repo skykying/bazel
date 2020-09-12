@@ -3,7 +3,7 @@ package(default_visibility = ["//visibility:public"])
 load(":cc_toolchain_config.bzl", "cc_toolchain_config")
 
 cc_toolchain_suite(
-    name = "buildroot",
+    name = "br",
     toolchains = {
         "x86_64": ":x86_64-toolchain",
     },
