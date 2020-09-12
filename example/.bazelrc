@@ -1,0 +1,7 @@
+# Define the toolchain
+build:br-toolchain --crosstool_top=@bazel_br_toolchain//toolchain:br
+build:br-toolchain --host_crosstool_top=@bazel_br_toolchain//toolchain:br
+build:br-toolchain --cpu=x86_64
+
+# Set the toolchain as default (optional, you can omit and use --config buildroot-toolchain instead)
+build --config br-toolchain
