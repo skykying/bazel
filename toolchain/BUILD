@@ -14,7 +14,7 @@ filegroup(name = "empty")
 filegroup(
     name = "all",
     srcs = [
-        "@bazel_buildroot_toolchain_files//:all",
+        "@bazel_br_toolchain_files//:all",
         "wrappers/x86_64-buildroot-linux-musl-ar",
         "wrappers/x86_64-linux-cpp.br_real",
         "wrappers/x86_64-linux-gcc-9.1.0.br_real",
