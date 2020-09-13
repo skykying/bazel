@@ -5,7 +5,7 @@ def bazel_br_toolchain_deps():
         http_archive(
             name = "bazel_br_toolchain_files",
             urls = [
-                "https://github.com/skykying/bazel-br-toolchain/releases/download/v0.0.3/bazel-buildroot-toolchain-d5ab572.tar.xz",
+                "https://github.com/skykying/bazel-br-toolchain/releases/download/v0.0.1/bazel-buildroot-toolchain-d5ab572.tar.xz",
             ],
             sha256 = "0fb830b65d8669c5e15640e658b2070b020c20ab7a30eb5ed6a3b2eb084f0fdc",
             build_file = Label("//toolchain:bazel_br_toolchain_files.BUILD"),
