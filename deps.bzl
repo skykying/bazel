@@ -21,4 +21,5 @@ def aarch64_toolchain_deps():
             ],
             sha256 = "6864fca0c15caf497c9f1956b5d0f47083a85c7e4d451ba97a8c8c724d0eb964",
             build_file = Label("//toolchain/aarch64:br_toolchain_aarch64.BUILD"),
+            strip_prefix = "aarch64-tulip-linux-gnu_sdk-buildroot",
         )

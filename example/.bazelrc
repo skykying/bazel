@@ -2,6 +2,8 @@
 # Build using platforms by default
 build --incompatible_enable_cc_toolchain_resolution
 build --platforms=@bazel_br_toolchain//platforms:k8-br-plt
+build --sandbox_debug
+
 
 # Define the toolchain
 build:br-toolchain --crosstool_top=@bazel_br_toolchain//toolchain/x86_64:k8-br
@@ -9,4 +11,10 @@ build:br-toolchain --host_crosstool_top=@bazel_br_toolchain//toolchain/x86_64:k8
 build:br-toolchain --cpu=k8
 
 # Set the toolchain as default (optional, you can omit and use --config br-toolchain instead)
-build --config br-toolchain
+#build --config br-toolchain
+
+# Define aarch64 the toolchain
+build:br-aarch64 --crosstool_top=@bazel_br_toolchain//toolchain/aarch64:aarch64-br
+build:br-aarch64 --host_crosstool_top=@bazel_br_toolchain//toolchain/aarch64:aarch64-br
+#build:br-aarch64 --cpu=aarch64
+
