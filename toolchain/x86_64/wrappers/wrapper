@@ -1,0 +1,6 @@
+#!/bin/bash --norc
+
+# All symlinks in this directory point to this script: parse the basename
+# of $0 to figure out which binary to execute.
+
+exec "external/br_toolchain_k8/bin/$(basename "$0")" "$@"

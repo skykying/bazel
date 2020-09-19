@@ -9,6 +9,7 @@ http_archive(
     strip_prefix = "bazel-br-toolchain-1.0.1",
 )
 
-load("@bazel_br_toolchain//:deps.bzl", "bazel_br_toolchain_deps")
+load("@bazel_br_toolchain//:deps.bzl", "k8_toolchain_deps","aarch64_toolchain_deps")
 
-bazel_br_toolchain_deps()
+k8_toolchain_deps()
+aarch64_toolchain_deps()

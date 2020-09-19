@@ -1,11 +1,11 @@
 package(default_visibility = ["//visibility:public"])
 
-load(":cc_toolchain_config.bzl", "cc_toolchain_config")
+load(":cc_toolchain_config.bzl", "cc_k8_toolchain_config")
 
 cc_toolchain_suite(
-    name = "br",
+    name = "k8-br",
     toolchains = {
-        "x86_64": ":x86_64-toolchain",
+        "k8": ":x86_64-toolchain",
     },
 )
 
@@ -14,7 +14,7 @@ filegroup(name = "empty")
 filegroup(
     name = "all",
     srcs = [
-        "@bazel_br_toolchain_files//:all",
+        "@br_toolchain_k8//:all",
         "wrappers/x86_64-buildroot-linux-musl-ar",
         "wrappers/x86_64-linux-cpp.br_real",
         "wrappers/x86_64-linux-gcc-9.1.0.br_real",
@@ -38,7 +38,7 @@ cc_toolchain(
     supports_param_files = False,
 )
 
-cc_toolchain_config(
+cc_k8_toolchain_config(
     name = "x86_64-toolchain-config",
 )
 

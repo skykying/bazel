@@ -22,17 +22,18 @@ http_archive(
     strip_prefix = "bazel-br-toolchain-0.0.2",
 )
 
-load("@bazel_br_toolchain//:deps.bzl", "bazel_br_toolchain_deps")
+load("@bazel_br_toolchain//:deps.bzl", "k8_toolchain_deps","aarch64_toolchain_deps")
 
-bazel_br_toolchain_deps()
+k8_toolchain_deps()
+aarch64_toolchain_deps()
 ```
 
 ### `.bazelrc`
 
 ```
 # Define the toolchain
-build:br-toolchain --crosstool_top=@bazel_br_toolchain//toolchain:br
-build:br-toolchain --host_crosstool_top=@bazel_br_toolchain//toolchain:br
+build:br-toolchain --crosstool_top=@bazel_br_toolchain//toolchain:k8-br
+build:br-toolchain --host_crosstool_top=@bazel_br_toolchain//toolchain:k8-br
 build:br-toolchain --cpu=x86_64
 
 # Set the toolchain as default (optional, you can omit and use --config buildroot-toolchain instead)

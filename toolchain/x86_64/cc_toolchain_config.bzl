@@ -123,7 +123,7 @@ def _toolchain_config_impl(ctx):
         ],
     )
 
-cc_toolchain_config = rule(
+cc_k8_toolchain_config = rule(
     implementation = _toolchain_config_impl,
     attrs = {},
     provides = [CcToolchainConfigInfo],
