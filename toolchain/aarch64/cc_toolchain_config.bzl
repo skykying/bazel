@@ -27,6 +27,9 @@ all_link_actions = [
 ]
 
 def _toolchain_config_impl(ctx):
+
+    builtin_sysroot = 'sysroot'
+
     tool_paths = [
         tool_path(
             name = "gcc",
@@ -116,6 +119,7 @@ def _toolchain_config_impl(ctx):
         compiler = "gcc",
         abi_version = "unknown",
         abi_libc_version = "unknown",
+        builtin_sysroot = builtin_sysroot,
         tool_paths = tool_paths,
         features = [
             default_link_flags_feature,
