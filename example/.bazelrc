@@ -1,7 +1,7 @@
 
 # Build using platforms by default
-build --incompatible_enable_cc_toolchain_resolution
-build --platforms=@bazel_br_toolchain//platforms:k8-br-plt
+#build --incompatible_enable_cc_toolchain_resolution
+#build --platforms=@bazel_br_toolchain//platforms:k8-br-plt
 build --sandbox_debug
 build --verbose_failures
 
