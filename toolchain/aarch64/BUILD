@@ -15,9 +15,9 @@ filegroup(
     name = "all",
     srcs = [
         "@br_toolchain_aarch64//:all",
-        "wrappers/aarch64-buildroot-linux-musl-ar",
+        "wrappers/aarch64-linux-ar",
         "wrappers/aarch64-linux-cpp.br_real",
-        "wrappers/aarch64-linux-gcc-9.1.0.br_real",
+        "wrappers/aarch64-linux-gcc-8.3.0.br_real",
         "wrappers/aarch64-linux-ld",
         "wrappers/aarch64-linux-nm",
         "wrappers/aarch64-linux-objdump",

@@ -30,7 +30,7 @@ def _toolchain_config_impl(ctx):
     tool_paths = [
         tool_path(
             name = "gcc",
-            path = "wrappers/aarch64-linux-gcc-9.1.0.br_real",
+            path = "wrappers/aarch64-linux-gcc-8.3.0.br_real",
         ),
         tool_path(
             name = "ld",
@@ -38,7 +38,7 @@ def _toolchain_config_impl(ctx):
         ),
         tool_path(
             name = "ar",
-            path = "wrappers/aarch64-buildroot-linux-musl-ar",
+            path = "wrappers/aarch64-linux-ar",
         ),
         tool_path(
             name = "cpp",
