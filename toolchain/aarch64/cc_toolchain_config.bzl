@@ -30,19 +30,19 @@ def _toolchain_config_impl(ctx):
     tool_paths = [
         tool_path(
             name = "gcc",
-            path = "wrappers/x86_64-linux-gcc-9.1.0.br_real",
+            path = "wrappers/aarch64-linux-gcc-9.1.0.br_real",
         ),
         tool_path(
             name = "ld",
-            path = "wrappers/x86_64-linux-ld",
+            path = "wrappers/aarch64-linux-ld",
         ),
         tool_path(
             name = "ar",
-            path = "wrappers/x86_64-buildroot-linux-musl-ar",
+            path = "wrappers/aarch64-buildroot-linux-musl-ar",
         ),
         tool_path(
             name = "cpp",
-            path = "wrappers/x86_64-linux-cpp.br_real",
+            path = "wrappers/aarch64-linux-cpp.br_real",
         ),
         tool_path(
             name = "gcov",
@@ -50,11 +50,11 @@ def _toolchain_config_impl(ctx):
         ),
         tool_path(
             name = "nm",
-            path = "wrappers/x86_64-linux-nm",
+            path = "wrappers/aarch64-linux-nm",
         ),
         tool_path(
             name = "objdump",
-            path = "wrappers/x86_64-linux-objdump",
+            path = "wrappers/aarch64-linux-objdump",
         ),
         tool_path(
             name = "strip",
@@ -108,10 +108,10 @@ def _toolchain_config_impl(ctx):
 
     return cc_common.create_cc_toolchain_config_info(
         ctx = ctx,
-        toolchain_identifier = "x86_64-toolchain",
-        host_system_name = "x86_64-unknown-linux-gnu",
-        target_system_name = "x86_64-buildroot-linux-musl",
-        target_cpu = "x86_64",
+        toolchain_identifier = "aarch64-toolchain",
+        host_system_name = "aarch64-unknown-linux-gnu",
+        target_system_name = "aarch64-buildroot-linux-musl",
+        target_cpu = "aarch64",
         target_libc = "musl",
         compiler = "gcc",
         abi_version = "unknown",
