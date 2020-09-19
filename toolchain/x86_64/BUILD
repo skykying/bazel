@@ -5,7 +5,7 @@ load(":cc_toolchain_config.bzl", "cc_k8_toolchain_config")
 cc_toolchain_suite(
     name = "k8-br",
     toolchains = {
-        "k8": ":x86_64-toolchain",
+        "k8": ":cc_x86_64-toolchain",
     },
 )
 
@@ -25,7 +25,7 @@ filegroup(
 )
 
 cc_toolchain(
-    name = "x86_64-toolchain",
+    name = "cc_x86_64-toolchain",
     toolchain_identifier = "x86_64-toolchain",
     toolchain_config = ":x86_64-toolchain-config",
     all_files = ":all",
@@ -42,3 +42,16 @@ cc_k8_toolchain_config(
     name = "x86_64-toolchain-config",
 )
 
+toolchain(
+    name = "linux_x86_64",
+    exec_compatible_with = [
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_64",
+    ],
+    target_compatible_with = [
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_64",
+    ],
+    toolchain = ":cc_x86_64-toolchain",
+    toolchain_type = "@bazel_tools//tools/cpp:toolchain_type",
+)
