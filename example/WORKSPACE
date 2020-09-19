@@ -3,7 +3,7 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 http_archive(
     name = "bazel_br_toolchain",
     urls = [
-        "https://github.com/skykying/bazel-br-toolchain/archive/V0.1.2.tar.gz",
+        "https://github.com/skykying/bazel-br-toolchain/archive/v0.1.2.tar.gz",
     ],
     sha256 = "b7cef7238cb74d8977657f7fb930d12e714331075036fecf586b35db63010cb6",
     strip_prefix = "bazel-br-toolchain-0.1.2",
