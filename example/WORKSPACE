@@ -5,7 +5,7 @@ http_archive(
     urls = [
         "https://github.com/skykying/bazel-br-toolchain/archive/V0.1.2.tar.gz",
     ],
-    sha256 = "352cb2e672352ee9948ba2f5963002fc842f3666f3b1826017054bb71b9d8fc3",
+    sha256 = "b7cef7238cb74d8977657f7fb930d12e714331075036fecf586b35db63010cb6",
     strip_prefix = "bazel-br-toolchain-0.1.2",
 )
 
